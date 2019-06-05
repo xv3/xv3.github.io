@@ -1,41 +1,94 @@
-var appDaily = {
-  baiduSearch: function(words) {
-    var key = 'site:' + window.location.host + '%20' + words.replace(/\s/g, '%20');
-    var url = 'https://www.baidu.com/baidu?tn=baidu&ie=utf-8&word=';
+var customSearch;
 
-    window.open(url + key, '_blank');
-  },
-  googleSearch: function(words) {
-    var key = 'site:' + window.location.host + '%20' + words.replace(/\s/g, '%20');
-    var url = 'https://www.google.com/search?q=';
+(function($){
+  "use strict";
 
-    window.open(url + key, '_blank');
-  },
-  submitSearch: function(search_engines) {
-    var $ipt = document.getElementById('homeSearchInput');
-
-    if (search_engines === 'baidu') {
-      this.baiduSearch($ipt.value.trim());
-    } else {
-      this.googleSearch($ipt.value.trim());
+	var switchSidebarTab = function(e) {
+		var self = $(this),
+				target = self.attr('data-toggle'),
+				counter_target = target === 'toc' ? 'bio' : 'toc';
+		if (self.hasClass('active')) {
+			return;
+		}
+		toggleActive(self, e);
+		toggleActive(self.siblings('.dark-btn'), e);
+		$('.site-' + counter_target).toggleClass('show');
+		setTimeout(function() {
+			$('.site-' + counter_target).hide();
+			$('.site-' + target).show();
+			setTimeout(function() {
+				$('.site-' + target).toggleClass('show');
+			}, 50);
+		}, 240);
+	};
+  
+  var toggleActive = function(self, e) {
+    e.preventDefault();
+    if (self.hasClass("active") === true) {
+      self.removeClass("active");
     }
+    else {
+      self.addClass("active");
+    }
+  };
 
-    return false;
-  },
-  bindToggleButton: function() {
-    var btn = document.querySelector('.menu-toggle');
-    var nav = document.querySelector('.navbar');
+  var scrolltoElement = function(e) {
+    e.preventDefault();
+    var self = $(this),
+        correction = e.data ? e.data.correction ? e.data.correction : 0 : 0;
+    $('html, body').animate({'scrollTop': $(self.attr('href')).offset().top - correction }, 400);
+  };
 
-    btn.addEventListener('click', function() {
-      var c = nav.getAttribute('class') || '';
+  var openBio = function(e) {
+    var self = $(this);
+    toggleActive(self, e);
+    $('body').addClass('bio-open');
+  };
 
-      if (c.indexOf('show-force') !== -1) {
-        nav.setAttribute('class', c.replace(/show-force/, '').trim());
-      } else {
-        nav.setAttribute('class', (c + ' show-force').trim());
-      }
-    });
-  }
-};
+  var closeBio = function(e) {
+    $('body').removeClass('bio-open');
+    toggleActive($('.site-nav-switch'), e);
+  };
+  
+  $(function() {
+	  $(".post-list, #footer, #page-nav").addClass('show');
+	  $('.site-nav-switch').on('click', openBio);
+	  $('.site-wrapper .overlay').on('click', closeBio);
+	  $('.window-nav, .go-comment, .site-toc a').on('click', scrolltoElement);
+	  $('.sidebar-switch .dark-btn').on('click', switchSidebarTab);
+	  
+	  setTimeout(function() {
+	    $('#loading-bar-wrapper').fadeOut(500);
+	  }, 300);
+	  
+	  if (SEARCH_SERVICE === 'google') {
+  	  customSearch = new GoogleCustomSearch({
+    	  apiKey: GOOGLE_CUSTOM_SEARCH_API_KEY,
+    	  engineId: GOOGLE_CUSTOM_SEARCH_ENGINE_ID
+  	  });
+	  }
+	  else if (SEARCH_SERVICE === 'algolia') {
+  	  customSearch = new AlgoliaSearch({
+    	  apiKey: ALGOLIA_API_KEY,
+    	  appId: ALGOLIA_APP_ID,
+    	  indexName: ALGOLIA_INDEX_NAME
+  	  });
+	  }
+	  else if (SEARCH_SERVICE === 'hexo') {
+  	  customSearch = new HexoSearch();
+	  }
+	  else if (SEARCH_SERVICE === 'azure') {
+  	  customSearch = new AzureSearch({
+    	  serviceName: AZURE_SERVICE_NAME,
+        indexName: AZURE_INDEX_NAME,
+        queryKey: AZURE_QUERY_KEY
+  	  });
+	  }
+	  else if (SEARCH_SERVICE === 'baidu') {
+  	  customSearch = new BaiduSearch({
+				apiId: BAIDU_API_ID
+			});
+	  }
+	});
 
-appDaily.bindToggleButton();
+})(jQuery);
