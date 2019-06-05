@@ -1,94 +1,43 @@
-var customSearch;
+document.addEventListener('DOMContentLoaded', function () {
+  // Get all "navbar-burger" elements
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  // Check if there are any nav burgers
+  if ($navbarBurgers.length > 0) {
+    // Add a click event on each of them
+    $navbarBurgers.forEach(function ($el) {
+      $el.addEventListener('click', () => {
+        // Get the target from the "data-target" attribute
+        var target = $el.dataset.target;
+        var $target = document.getElementById(target);
+        // Toggle the class on both the "navbar-burger" and the "navbar-menu"
+        $el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
 
-(function($){
-  "use strict";
+      });
+    });
+  }
+   var sr  = document.getElementById('search');
+  (window.screen.width < 800) ? sr.style.width= "" :  sr.style.width= "300px";
 
-	var switchSidebarTab = function(e) {
-		var self = $(this),
-				target = self.attr('data-toggle'),
-				counter_target = target === 'toc' ? 'bio' : 'toc';
-		if (self.hasClass('active')) {
-			return;
-		}
-		toggleActive(self, e);
-		toggleActive(self.siblings('.dark-btn'), e);
-		$('.site-' + counter_target).toggleClass('show');
-		setTimeout(function() {
-			$('.site-' + counter_target).hide();
-			$('.site-' + target).show();
-			setTimeout(function() {
-				$('.site-' + target).toggleClass('show');
-			}, 50);
-		}, 240);
-	};
-  
-  var toggleActive = function(self, e) {
-    e.preventDefault();
-    if (self.hasClass("active") === true) {
-      self.removeClass("active");
+});
+
+
+var value = document.getElementById("cur").value;
+if (value !== ""){
+    var u  = document.getElementById('share');
+    u.onmouseover = function() {
+        document.getElementById("shared").style.display = 'block';
     }
-    else {
-      self.addClass("active");
+    u.onmouseout = function() {
+        document.getElementById("shared").style.display = 'none';
     }
-  };
+    var al = document.getElementById('shared').getElementsByTagName('a');
+    for (var i=0; i<al.length; i++){
+        al[i].setAttribute('target', '_blank');
+    }
+    document.getElementById('fb').setAttribute("href", "https://www.facebook.com/sharer.php?u="+value);
+    document.getElementById('tw').setAttribute("href", "https://twitter.com/intent/tweet?url="+value);
+    document.getElementById('gp').setAttribute("href", "https://plus.google.com/share?url="+value);
+    document.getElementById('pt').setAttribute("href", "http://pinterest.com/pin/create/button/?url="+value);
+}
 
-  var scrolltoElement = function(e) {
-    e.preventDefault();
-    var self = $(this),
-        correction = e.data ? e.data.correction ? e.data.correction : 0 : 0;
-    $('html, body').animate({'scrollTop': $(self.attr('href')).offset().top - correction }, 400);
-  };
-
-  var openBio = function(e) {
-    var self = $(this);
-    toggleActive(self, e);
-    $('body').addClass('bio-open');
-  };
-
-  var closeBio = function(e) {
-    $('body').removeClass('bio-open');
-    toggleActive($('.site-nav-switch'), e);
-  };
-  
-  $(function() {
-	  $(".post-list, #footer, #page-nav").addClass('show');
-	  $('.site-nav-switch').on('click', openBio);
-	  $('.site-wrapper .overlay').on('click', closeBio);
-	  $('.window-nav, .go-comment, .site-toc a').on('click', scrolltoElement);
-	  $('.sidebar-switch .dark-btn').on('click', switchSidebarTab);
-	  
-	  setTimeout(function() {
-	    $('#loading-bar-wrapper').fadeOut(500);
-	  }, 300);
-	  
-	  if (SEARCH_SERVICE === 'google') {
-  	  customSearch = new GoogleCustomSearch({
-    	  apiKey: GOOGLE_CUSTOM_SEARCH_API_KEY,
-    	  engineId: GOOGLE_CUSTOM_SEARCH_ENGINE_ID
-  	  });
-	  }
-	  else if (SEARCH_SERVICE === 'algolia') {
-  	  customSearch = new AlgoliaSearch({
-    	  apiKey: ALGOLIA_API_KEY,
-    	  appId: ALGOLIA_APP_ID,
-    	  indexName: ALGOLIA_INDEX_NAME
-  	  });
-	  }
-	  else if (SEARCH_SERVICE === 'hexo') {
-  	  customSearch = new HexoSearch();
-	  }
-	  else if (SEARCH_SERVICE === 'azure') {
-  	  customSearch = new AzureSearch({
-    	  serviceName: AZURE_SERVICE_NAME,
-        indexName: AZURE_INDEX_NAME,
-        queryKey: AZURE_QUERY_KEY
-  	  });
-	  }
-	  else if (SEARCH_SERVICE === 'baidu') {
-  	  customSearch = new BaiduSearch({
-				apiId: BAIDU_API_ID
-			});
-	  }
-	});
-
-})(jQuery);
