@@ -90,21 +90,22 @@
 </ul>
 <p><strong>申请完成，开始您的 Office365 之旅。</strong><br>上述临时邮箱中有部分邮箱可以设置完毕后添加个人邮箱作为密码重置邮箱。 如果跳转到安全设置说明不支持。以上注册的账户即便域名失效了也不影响登陆。注册完毕后既是永久有效！<br><a name="HS6a7"></a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><strong>1、安装宝塔</strong></p>
-<ol>
-<li>#Centos系统</li>
-<li>yum install -y wget &amp;&amp; wget -O install.sh <a href="http://download.bt.cn/install/install.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install.sh</a> &amp;&amp; sh install.sh</li>
-<li>#Ubuntu系统</li>
-<li>wget -O install.sh <a href="http://download.bt.cn/install/install-ubuntu.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install-ubuntu.sh</a> &amp;&amp; sudo bash install.sh</li>
-<li>#Debian系统</li>
-<li>wget -O install.sh <a href="http://download.bt.cn/install/install-ubuntu.sh" target="_blank" rel="noopener">http://download.bt.cn/install/install-ubuntu.sh</a> &amp;&amp; bash install.sh</li>
-</ol>
+<p>#Centos系统</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y wget &amp;&amp; wget -O install.sh http://download.bt.cn/install/install.sh &amp;&amp; sh install.sh</span><br></pre></td></tr></table></figure>
+
+<p>#Ubuntu系统</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; sudo bash install.sh</span><br></pre></td></tr></table></figure>
+
+<p>#Debian系统</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -O install.sh http://download.bt.cn/install/install-ubuntu.sh &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+
 <p>安装完成后，进入面板安装<code>PHP 5.6+</code>、<code>Nginx</code>。</p>
 <p>安装完毕后，会显示你的登陆页面和用户名，密码。记好了。<br>在浏览器里输入你的ip:8888 ，输入用户名和密码后登陆宝塔面板：<br><img src="https://cdn.nlark.com/yuque/0/2019/png/366648/1560130814125-29b54710-da46-49fb-af2d-632594ff4748.png#align=left&display=inline&height=539&originHeight=539&originWidth=440&size=0&status=done&width=440" alt><br>这里只需要安装Nginx和php5.6就可以了，其他FTP，Mysql不需要。<br>安装好以后（大概20分钟），直接建站，这里可以直接使用端口号模式，比如我用了7000和端口建立了一个站点。你要是想绑定域名也行。<br><strong>2、安装Aria2</strong><br>这里用的逗比的脚本，使用命令：<br></p>
-<ol>
-<li>wget -N –no-check-certificate <a href="https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh</a> &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh</li>
-<li>#备用地址</li>
-<li>wget -N –no-check-certificate <a href="https://www.moerats.com/usr/shell/Aria2/aria2.sh" target="_blank" rel="noopener">https://www.moerats.com/usr/shell/Aria2/aria2.sh</a> &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh</li>
-</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh</span><br></pre></td></tr></table></figure>
+
+<p> #备用地址</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://www.moerats.com/usr/shell/Aria2/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh</span><br></pre></td></tr></table></figure>
+
 <p>选择1，安装aria2后一路yes就可以了。最后会出来一个密钥，记下来<br>安装完成后，如果我们想修改密码、下载文件位置、端口的话，可以使用命令<code>bash aria2.sh</code>，再选择修改配置即可，这里建议使用该脚本配置自动更新<code>BT-Tracker</code>服务器，对下载<code>BT</code>有加成。</p>
 <p><strong>3、安装ArinanNG和oneindex</strong><br>接着进入文件，在www/wwwroot/下面找到你ip地址建立的这个站点的站点文件，建立两个文件目录，一个命名为ng，一个命名为one<br>进入ng文件夹，用远程下载下载这货并解压（记得bt面板的远程下载时需要重命名，要有.zip,不然无法识别）<br>AriaNG（可视化aria2控制面板，用来控制aria2下载文件用）：<br></p>
 <ol>
@@ -118,50 +119,21 @@
 <li><a href="https://github.com/donwa/oneindex/archive/master.zip" target="_blank" rel="noopener">https://github.com/donwa/oneindex/archive/master.zip</a></li>
 </ol>
 <p>点击域名设置，添加<code>Nginx</code>伪静态：</p>
-<ol>
-<li>location / {if (!-f $request_filename){set $rule_0 1$rule_0;</li>
-<li>}if (!-d $request_filename){set $rule_0 2$rule_0;</li>
-<li>}if ($rule_0 = “21”){rewrite ^/(.*)$ /index.php?/$1 last;</li>
-<li>}</li>
-<li>}</li>
-</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">location / &#123;<span class="keyword">if</span> (!-f <span class="variable">$request_filename</span>)&#123;<span class="built_in">set</span> <span class="variable">$rule_0</span> 1<span class="variable">$rule_0</span>;</span><br><span class="line">&#125;<span class="keyword">if</span> (!-d <span class="variable">$request_filename</span>)&#123;<span class="built_in">set</span> <span class="variable">$rule_0</span> 2<span class="variable">$rule_0</span>;</span><br><span class="line">&#125;<span class="keyword">if</span> (<span class="variable">$rule_0</span> = <span class="string">"21"</span>)&#123;rewrite ^/(.*)$ /index.php?/<span class="variable">$1</span> last;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>4、修改配置文件<br>去编辑/root/.aria2/.aria2.conf ，，宝塔面板文件管理器-自带编辑器，在末尾添加以下2条命令<br></p>
-<p>文件的保存路径(可使用绝对路径或相对路径), 默认: 当前启动位置<br>dir=/Download</p>
-<p>同时最后加上一句：<br></p>
+<p>文件的保存路径(可使用绝对路径或相对路径), 默认: 当前启动位置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">dir=/Download</span><br><span class="line"></span><br><span class="line">同时最后加上一句：&lt;br /&gt;</span><br><span class="line">``` bash</span><br></pre></td></tr></table></figure>
+
 <p>on-download-complete=/root/upload2one.sh</p>
 <p>保存<br>然后同样用bt面板新建/root/upload2one.sh，输入如下代码：</p>
-<ol>
-<li>#!/bin/bash</li>
-<li>path=$3</li>
-<li>downloadpath=’/Download’</li>
-<li>if [ $2 -eq 0 ]</li>
-<li>then</li>
-<li>exit 0</li>
-<li>fi</li>
-<li>while true; do  #提取下载文件根路径，如把/root/downloads/a/b/c/d.jpg变成/root/downloads/a</li>
-<li>filepath=$path</li>
-<li>path=${path%/*};</li>
-<li>if [ “$path” = “$downloadpath” ] &amp;&amp; [ $2 -eq 1 ]  #如果下载的是单个文件</li>
-<li>then</li>
-<li>/www/server/php/56/bin/php /www/wwwroot/你的ip或者域名/one/one.php upload:file “$filepath” /upload/</li>
-<li>rm -rf “$filepath”</li>
-<li>exit 0</li>
-<li>elif [ “$path” = “$downloadpath” ]   #文件夹</li>
-<li>then</li>
-<li>/www/server/php/56/bin/php /www/wwwroot/你的ip或者域名/one/one.php upload:folder “$filepath”/ /upload/“${filepath##*/}”/</li>
-<li>rm -rf “$filepath”/</li>
-<li>exit 0</li>
-<li>fi</li>
-<li>done</li>
-</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">path=<span class="variable">$3</span></span><br><span class="line">downloadpath=’/Download’</span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$2</span> -eq 0 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">while</span> <span class="literal">true</span>; <span class="keyword">do</span> <span class="comment">#提取下载文件根路径，如把/root/downloads/a/b/c/d.jpg变成/root/downloads/a</span></span><br><span class="line">filepath=<span class="variable">$path</span></span><br><span class="line">path=<span class="variable">$&#123;path%/*&#125;</span>;</span><br><span class="line"><span class="keyword">if</span> [ “<span class="variable">$path</span>” = “<span class="variable">$downloadpath</span>” ] &amp;&amp; [ <span class="variable">$2</span> -eq 1 ] <span class="comment">#如果下载的是单个文件</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">/www/server/php/56/bin/php /www/wwwroot/你的ip或者域名/one/one.php upload:file “<span class="variable">$filepath</span>” /upload/</span><br><span class="line">rm -rf “<span class="variable">$filepath</span>”</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line"><span class="keyword">elif</span> [ “<span class="variable">$path</span>” = “<span class="variable">$downloadpath</span>” ] <span class="comment">#文件夹</span></span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">/www/server/php/56/bin/php /www/wwwroot/你的ip或者域名/one/one.php upload:folder “<span class="variable">$filepath</span>”/ /upload/“<span class="variable">$&#123;filepath##*/&#125;</span>”/</span><br><span class="line">rm -rf “<span class="variable">$filepath</span>”/</span><br><span class="line"><span class="built_in">exit</span> 0</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
 <p>记得把文中“你的ip或者域名”换成你的ip或者域名（和网站存放目录相同）<br>然后再连上ssh：<br></p>
-<ol>
-<li>chmod +x /root/upload2one.sh</li>
-</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /root/upload2one.sh</span><br></pre></td></tr></table></figure>
+
 <p>赋予权限后，<br></p>
-<ol>
-<li>./aria2.sh</li>
-</ol>
+<pre><code class="bash">./aria2.sh</code></pre>
 <p>输入6<br>重启aria2</p>
 <p>之后之后在你的浏览器里输入你的ip或域名/ng/index.html后，登陆aria2NG，ArinNG设置-PRC设置Aria2 PRC 钥匙，然后把密钥绑上去，aria2的部署就完成了。<br>如果6800端口没有开，记得在宝塔面板里开一下<br>之后在浏览器里输入你的ip/one，将你的onedrive硬盘绑定上。</p>
 
