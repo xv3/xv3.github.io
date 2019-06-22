@@ -1,169 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
-  <title>xv3</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="xv3">
-<meta property="og:url" content="https://xv3.github.io/categories/index.html">
-<meta property="og:site_name" content="xv3">
-<meta property="og:locale" content="default">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xv3">
-  
-  <link rel="stylesheet" href="/css/index.css">
-</head>
-</html>
-<body style="
+extends includes/layout
+
+block content
+
+    section#wrapper.post
+        article
+            header
+                h1!=page.title
+                h2.headline!=date(page.date, 'MMM DD, YYYY h:mm')
+                    |·
+                    |#{wordcount(page.content)} words
+                    |·
+                    |#{min2read(page.content)} minutes read
+                    span.tags
+
+            if toc(page.content)
+                div#toc!=toc(page.content,{list_number:false})
+
+            section#post-body!=page.content
+
+            - var prev = page.prev ? page.prev.path : false;
+            - var next = page.next ? page.next.path : false;
+            nav#post-nav
+                span.prev
+                    if page.prev
+                        a(href=url_for(prev))
+                            span.arrow ←
+                            | Newer Posts
+                span.next
+                    if page.next
+                        a(href=url_for(next))
+                            | Older Posts
+                            span.arrow →
+
+            include includes/comment.pug
 
 
-  background-color: #eff0f6
-
-">
-  <div id="container">
-    <nav id="nav">
-  <header class="header">
-    <a href="/" class="title">Clover Tuan</a>
-  </header>
-  <div class="ctnWrap">
-    <div class="icons">
-      
-        
-          
-            <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn iconfont icon-dribbble"></a>
-          
-        
-          
-            <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn iconfont icon-behance"></a>
-          
-        
-          
-            <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn iconfont icon-lofter"></a>
-          
-        
-          
-            <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn iconfont icon-instagram"></a>
-          
-        
-          
-            <a href="https://github.com/cloverTuan" target="_blank" class="nav-icn iconfont icon-github"></a>
-          
-        
-      
-    </div>
-    <div class="menu">
-      
-        
-            <a href="/" class="nav-menu ">HOME</a>
-          
-        
-            <a href="/archives" class="nav-menu ">ARCHIVE</a>
-          
-        
-            <a href="/about" class="nav-menu ">ABOUT</a>
-          
-        
-      
-    </div>
-  </div>
-</nav>
-    <div id="main">
-  
-  <section class="archive">
-    
-      <section class="archive-category">
-        <h1 class="title">OneDrive</h1>
-        <ul class="menu">
-          
-            <li>
-              <a href="/2019/06/12/Aria2-Aria2Ng-OneIndex-OneDrive离线下载-在线观看网盘/">Aria2+Aria2Ng+OneIndex+OneDrive离线下载/在线观看网盘</a>
-              <span class="date">Jun 12, 2019</span>
-            </li>
-          
-        </ul>
-      </section>
-    
-      <section class="archive-category">
-        <h1 class="title">Others</h1>
-        <ul class="menu">
-          
-            <li>
-              <a href="/2019/06/01/hello-world/">Hello World</a>
-              <span class="date">Jun 1, 2019</span>
-            </li>
-          
-        </ul>
-      </section>
-    
-      <section class="archive-category">
-        <h1 class="title">分享</h1>
-        <ul class="menu">
-          
-            <li>
-              <a href="/2019/06/10/免费接码平台/">免费接码平台</a>
-              <span class="date">Jun 10, 2019</span>
-            </li>
-          
-        </ul>
-      </section>
-    
-      <section class="archive-category">
-        <h1 class="title">图片</h1>
-        <ul class="menu">
-          
-            <li>
-              <a href="/2019/06/20/免费无版权优质图片网站-个人-商用值得收藏/">免费无版权优质图片网站 个人+商用值得收藏</a>
-              <span class="date">Jun 20, 2019</span>
-            </li>
-          
-        </ul>
-      </section>
-    
-      <section class="archive-category">
-        <h1 class="title">影视</h1>
-        <ul class="menu">
-          
-            <li>
-              <a href="/2019/06/06/免费在线影视/">免费在线影视</a>
-              <span class="date">Jun 6, 2019</span>
-            </li>
-          
-        </ul>
-      </section>
-    
-  </section>
 
 
-</div>
-    <footer id="footer" class="f-cf">
-  d.guangying@foxmail.com
-  
-    
-      
-        · <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn">Dribbble</a>
-      
-    
-      
-        · <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn">Behance</a>
-      
-    
-      
-        · <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn">Lofter</a>
-      
-    
-      
-        · <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn">Instagram</a>
-      
-    
-      
-        · <a href="https://github.com/cloverTuan" target="_blank" class="nav-icn">GitHub</a>
-      
-    
-  
-  <span class="copyright">All rights reserved @Clover Tuan</span>
-</footer>
-  </div>
-</body>
-</html>

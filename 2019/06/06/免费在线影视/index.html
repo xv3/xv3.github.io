@@ -1,312 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
-  <title>免费在线影视 | xv3</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="全能影视免费的在线影视站，仅用于测试用途。日常请使用正版视频软件，支持正版人人有责。    名称 免费 特点    达达兔 手机视频 在线视频无广告   盐酥鸡 手机影视 免费视频无广告   片吧 免费视频 最新免费在线视频   嗨多米 高清视频 最新电视剧在线   海狸影视 高清影视 最新电影免费在线   海兔影院 在线电影 最新电影在线   豌豆影视 在线电视 高清电影在线   52 电影院">
-<meta name="keywords" content="影视">
-<meta property="og:type" content="article">
-<meta property="og:title" content="免费在线影视">
-<meta property="og:url" content="https://xv3.github.io/2019/06/06/免费在线影视/index.html">
-<meta property="og:site_name" content="xv3">
-<meta property="og:description" content="全能影视免费的在线影视站，仅用于测试用途。日常请使用正版视频软件，支持正版人人有责。    名称 免费 特点    达达兔 手机视频 在线视频无广告   盐酥鸡 手机影视 免费视频无广告   片吧 免费视频 最新免费在线视频   嗨多米 高清视频 最新电视剧在线   海狸影视 高清影视 最新电影免费在线   海兔影院 在线电影 最新电影在线   豌豆影视 在线电视 高清电影在线   52 电影院">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-10T14:53:14.496Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="免费在线影视">
-<meta name="twitter:description" content="全能影视免费的在线影视站，仅用于测试用途。日常请使用正版视频软件，支持正版人人有责。    名称 免费 特点    达达兔 手机视频 在线视频无广告   盐酥鸡 手机影视 免费视频无广告   片吧 免费视频 最新免费在线视频   嗨多米 高清视频 最新电视剧在线   海狸影视 高清影视 最新电影免费在线   海兔影院 在线电影 最新电影在线   豌豆影视 在线电视 高清电影在线   52 电影院">
-  
-  <link rel="stylesheet" href="/css/index.css">
-</head>
-</html>
-<body style="
+extends includes/layout
+
+block content
+
+    section#wrapper.post
+        article
+            header
+                h1!=page.title
+                h2.headline!=date(page.date, 'MMM DD, YYYY h:mm')
+                    |·
+                    |#{wordcount(page.content)} words
+                    |·
+                    |#{min2read(page.content)} minutes read
+                    span.tags
+
+            if toc(page.content)
+                div#toc!=toc(page.content,{list_number:false})
+
+            section#post-body!=page.content
+
+            - var prev = page.prev ? page.prev.path : false;
+            - var next = page.next ? page.next.path : false;
+            nav#post-nav
+                span.prev
+                    if page.prev
+                        a(href=url_for(prev))
+                            span.arrow ←
+                            | Newer Posts
+                span.next
+                    if page.next
+                        a(href=url_for(next))
+                            | Older Posts
+                            span.arrow →
+
+            include includes/comment.pug
 
 
-  background-color: #eff0f6
 
-">
-  <div id="container">
-    <nav id="nav">
-  <header class="header">
-    <a href="/" class="title">Clover Tuan</a>
-  </header>
-  <div class="ctnWrap">
-    <div class="icons">
-      
-        
-          
-            <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn iconfont icon-dribbble"></a>
-          
-        
-          
-            <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn iconfont icon-behance"></a>
-          
-        
-          
-            <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn iconfont icon-lofter"></a>
-          
-        
-          
-            <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn iconfont icon-instagram"></a>
-          
-        
-          
-            <a href="https://github.com/cloverTuan" target="_blank" class="nav-icn iconfont icon-github"></a>
-          
-        
-      
-    </div>
-    <div class="menu">
-      
-        
-            <a href="/" class="nav-menu ">HOME</a>
-          
-        
-            <a href="/archives" class="nav-menu ">ARCHIVE</a>
-          
-        
-            <a href="/about" class="nav-menu ">ABOUT</a>
-          
-        
-      
-    </div>
-  </div>
-</nav>
-    <div id="main"><section class="article">
-  <h2 class="title">免费在线影视</h2>
-  <p class="sub">Jun 6, 2019</p>
-  <article class="content">
-    <p><a name="DlFRl"></a></p>
-<h2 id="全能影视"><a href="#全能影视" class="headerlink" title="全能影视"></a>全能影视</h2><p>免费的在线影视站，仅用于<strong>测试用途</strong>。日常请使用<strong>正版视频</strong>软件，支持正版人人有责。</p>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>免费</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://www.dadatu.co/" target="_blank" rel="noopener">达达兔</a></td>
-<td>手机视频</td>
-<td>在线视频无广告</td>
-</tr>
-<tr>
-<td><a href="https://www.ysuzy.com/" target="_blank" rel="noopener">盐酥鸡</a></td>
-<td>手机影视</td>
-<td>免费视频无广告</td>
-</tr>
-<tr>
-<td><a href="http://pianba.tv/" target="_blank" rel="noopener">片吧</a></td>
-<td>免费视频</td>
-<td>最新免费在线视频</td>
-</tr>
-<tr>
-<td><a href="http://www.haiduomi.com/" target="_blank" rel="noopener">嗨多米</a></td>
-<td>高清视频</td>
-<td>最新电视剧在线</td>
-</tr>
-<tr>
-<td><a href="http://www.hailiys.com/" target="_blank" rel="noopener">海狸影视</a></td>
-<td>高清影视</td>
-<td>最新电影免费在线</td>
-</tr>
-<tr>
-<td><a href="http://www.haitum.cn/" target="_blank" rel="noopener">海兔影院</a></td>
-<td>在线电影</td>
-<td>最新电影在线</td>
-</tr>
-<tr>
-<td><a href="https://www.wandouys.com/" target="_blank" rel="noopener">豌豆影视</a></td>
-<td>在线电视</td>
-<td>高清电影在线</td>
-</tr>
-<tr>
-<td><a href="https://www.52dyy.vip/" target="_blank" rel="noopener">52 电影院</a></td>
-<td>高清电影</td>
-<td>高清视频在线</td>
-</tr>
-<tr>
-<td><a href="http://www.ox37.com/" target="_blank" rel="noopener">欧西电影</a></td>
-<td>免费影视</td>
-<td>最新热门电影在线</td>
-</tr>
-<tr>
-<td><a href="http://www.976km.cn/" target="_blank" rel="noopener">九州影院</a></td>
-<td>免费在线</td>
-<td>最新热门影视在线</td>
-</tr>
-<tr>
-<td><a href="http://www.htzxys.com/" target="_blank" rel="noopener">海天影视</a></td>
-<td>在线免费</td>
-<td>最新热门影视在线</td>
-</tr>
-<tr>
-<td><a href="http://v.778qs.com/" target="_blank" rel="noopener">暖光影视</a></td>
-<td>影视在线</td>
-<td>热门影视在线</td>
-</tr>
-<tr>
-<td><a href="https://www.kankanwu.com/" target="_blank" rel="noopener">看看屋</a></td>
-<td>影视在线</td>
-<td>最新热门影视在线</td>
-</tr>
-<tr>
-<td><a href="http://www.100sp.com/" target="_blank" rel="noopener">100 视频</a></td>
-<td>影视在线</td>
-<td>最新热门影视在线</td>
-</tr>
-</tbody></table>
-<p><a name="oebr7"></a></p>
-<h2 id="日韩"><a href="#日韩" class="headerlink" title="日韩"></a>日韩</h2><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>影视</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://www.rijutv.com/" target="_blank" rel="noopener">日剧 tv</a></td>
-<td>日剧</td>
-<td>日剧资讯及日剧在线</td>
-</tr>
-<tr>
-<td><a href="https://www.reboriju.com/" target="_blank" rel="noopener">热播日剧</a></td>
-<td>日剧</td>
-<td>日剧在线，资源多</td>
-</tr>
-<tr>
-<td><a href="https://www.hanfan.cc/32852.html" target="_blank" rel="noopener">韩饭网</a></td>
-<td>韩剧</td>
-<td>韩剧资讯及百度网盘下载</td>
-</tr>
-<tr>
-<td><a href="http://www.hjzlg.com/web3/YCMS_News.asp" target="_blank" rel="noopener">韩粉乐园</a></td>
-<td>韩剧</td>
-<td>韩剧资讯及韩剧在线</td>
-</tr>
-<tr>
-<td><a href="http://www.duduhanju.net/" target="_blank" rel="noopener">嘟嘟韩剧</a></td>
-<td>韩剧</td>
-<td>韩剧在线观看</td>
-</tr>
-<tr>
-<td><a href="http://hanju.koudaibaobao.com/" target="_blank" rel="noopener">韩剧 tv</a></td>
-<td>韩剧</td>
-<td>手机看韩剧必备 app</td>
-</tr>
-</tbody></table>
-<p><a name="qxYMV"></a></p>
-<h2 id="欧美"><a href="#欧美" class="headerlink" title="欧美"></a>欧美</h2><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>影视</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="http://www.novipnoad.com/" target="_blank" rel="noopener">NO 视频</a></td>
-<td>海外剧</td>
-<td>欧美、日韩、港台电视剧电影</td>
-</tr>
-<tr>
-<td><a href="https://www.dililitv.com/" target="_blank" rel="noopener">嘀哩哩</a></td>
-<td>海外剧</td>
-<td>欧美、日韩最新电影电视剧</td>
-</tr>
-<tr>
-<td><a href="https://www.nfmovies.com/" target="_blank" rel="noopener">奈菲影视</a></td>
-<td>海外剧</td>
-<td>欧美、日韩、港台电影电视剧</td>
-</tr>
-<tr>
-<td><a href="https://in.gimy.tv/" target="_blank" rel="noopener">剧迷</a></td>
-<td>海外剧</td>
-<td>欧美、日韩、港台电视剧电影</td>
-</tr>
-<tr>
-<td><a href="https://91mjw.com/" target="_blank" rel="noopener">91 美剧网</a></td>
-<td>海外剧</td>
-<td>在线美剧，更新快</td>
-</tr>
-<tr>
-<td><a href="http://www.meijuniao.com/" target="_blank" rel="noopener">美剧鸟</a></td>
-<td>美剧</td>
-<td>主打美剧，资源多</td>
-</tr>
-<tr>
-<td><a href="https://www.meijushe.cc/" target="_blank" rel="noopener">美剧社</a></td>
-<td>美剧</td>
-<td>主打美剧，更新快</td>
-</tr>
-</tbody></table>
-<p><a name="98bZ7"></a></p>
-<h2 id="动漫"><a href="#动漫" class="headerlink" title="动漫"></a>动漫</h2><table>
-<thead>
-<tr>
-<th>名称</th>
-<th>影视</th>
-<th>特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a href="https://www.halihali.me/" target="_blank" rel="noopener">哈哩哈哩</a></td>
-<td>动漫</td>
-<td>动漫在线观看</td>
-</tr>
-<tr>
-<td><a href="http://www.zhuifanju.com/" target="_blank" rel="noopener">追番剧</a></td>
-<td>动漫</td>
-<td>追动漫最新番，经典动漫、动画片抢先看</td>
-</tr>
-<tr>
-<td><a href="http://www.zzzfun.com/" target="_blank" rel="noopener">zzzfun</a></td>
-<td>动漫</td>
-<td>动漫在线更新快</td>
-</tr>
-</tbody></table>
 
-  </article>
-  <footer class="f-cf">
-    
-      <a href="/2019/06/10/免费接码平台/" class="link f-fl">⟵免费接码平台</a>
-    
-    
-      <a href="/2019/06/01/hello-world/" class="link f-fr">Hello World⟶</a>
-    
-  </footer>
-</section></div>
-    <footer id="footer" class="f-cf">
-  d.guangying@foxmail.com
-  
-    
-      
-        · <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn">Dribbble</a>
-      
-    
-      
-        · <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn">Behance</a>
-      
-    
-      
-        · <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn">Lofter</a>
-      
-    
-      
-        · <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn">Instagram</a>
-      
-    
-      
-        · <a href="https://github.com/cloverTuan" target="_blank" class="nav-icn">GitHub</a>
-      
-    
-  
-  <span class="copyright">All rights reserved @Clover Tuan</span>
-</footer>
-  </div>
-</body>
-</html>

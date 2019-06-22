@@ -1,139 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
-  <title>Archives | xv3</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="xv3">
-<meta property="og:url" content="https://xv3.github.io/archives/index.html">
-<meta property="og:site_name" content="xv3">
-<meta property="og:locale" content="default">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xv3">
-  
-  <link rel="stylesheet" href="/css/index.css">
-</head>
-</html>
-<body style="
+extends includes/layout
+
+block content
+
+    section#wrapper.home
+
+        div.archive
+            h3!='~yeah~baby~'
+            each item in site.posts.sort('date', -1).toArray()
+              - var postTitle = item.title || 'No Title'
+              - var createDate = date(item.date, 'MMM DD')
+              ul
+                  div.post-item
+                      div.post-time=createDate
+                      if item.link
+                          a.post-link(href=url_for(item.link))= postTitle
+                      else
+                          a.post-link(href=url_for(item.path))= postTitle
 
 
-  background-color: #eff0f6
 
-">
-  <div id="container">
-    <nav id="nav">
-  <header class="header">
-    <a href="/" class="title">Clover Tuan</a>
-  </header>
-  <div class="ctnWrap">
-    <div class="icons">
-      
-        
-          
-            <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn iconfont icon-dribbble"></a>
-          
-        
-          
-            <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn iconfont icon-behance"></a>
-          
-        
-          
-            <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn iconfont icon-lofter"></a>
-          
-        
-          
-            <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn iconfont icon-instagram"></a>
-          
-        
-          
-            <a href="https://github.com/cloverTuan" target="_blank" class="nav-icn iconfont icon-github"></a>
-          
-        
-      
-    </div>
-    <div class="menu">
-      
-        
-            <a href="/" class="nav-menu ">HOME</a>
-          
-        
-            <a href="/archives" class="nav-menu z-active">ARCHIVE</a>
-          
-        
-            <a href="/about" class="nav-menu ">ABOUT</a>
-          
-        
-      
-    </div>
-  </div>
-</nav>
-    <div id="main"><section class="archive">
-  
-  
-    <section class="archive-category">
-      <h1 class="title">2019</h1>
-      <ul class="menu">
-        
-          <li>
-            <a href="/2019/06/20/免费无版权优质图片网站-个人-商用值得收藏/">免费无版权优质图片网站 个人+商用值得收藏</a>
-            <span class="date">Jun 20, 2019</span>
-          </li>
-        
-          <li>
-            <a href="/2019/06/12/Aria2-Aria2Ng-OneIndex-OneDrive离线下载-在线观看网盘/">Aria2+Aria2Ng+OneIndex+OneDrive离线下载/在线观看网盘</a>
-            <span class="date">Jun 12, 2019</span>
-          </li>
-        
-          <li>
-            <a href="/2019/06/10/免费接码平台/">免费接码平台</a>
-            <span class="date">Jun 10, 2019</span>
-          </li>
-        
-          <li>
-            <a href="/2019/06/06/免费在线影视/">免费在线影视</a>
-            <span class="date">Jun 6, 2019</span>
-          </li>
-        
-          <li>
-            <a href="/2019/06/01/hello-world/">Hello World</a>
-            <span class="date">Jun 1, 2019</span>
-          </li>
-        
-      </ul>
-    </section>
-  
-</section>
-
-</div>
-    <footer id="footer" class="f-cf">
-  d.guangying@foxmail.com
-  
-    
-      
-        · <a href="https://dribbble.com/clovertuan" target="_blank" class="nav-icn">Dribbble</a>
-      
-    
-      
-        · <a href="https://www.behance.net/clovertuan" target="_blank" class="nav-icn">Behance</a>
-      
-    
-      
-        · <a href="http://clovertuan.lofter.com/" target="_blank" class="nav-icn">Lofter</a>
-      
-    
-      
-        · <a href="https://www.instagram.com/clovertuan/" target="_blank" class="nav-icn">Instagram</a>
-      
-    
-      
-        · <a href="https://github.com/cloverTuan" target="_blank" class="nav-icn">GitHub</a>
-      
-    
-  
-  <span class="copyright">All rights reserved @Clover Tuan</span>
-</footer>
-  </div>
-</body>
-</html>
