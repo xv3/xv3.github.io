@@ -1,39 +1,255 @@
-extends includes/layout
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>免费接码平台 | xv3</title>
+  <meta name="description" content="A geeker blog.">
+  <meta name="keywords" content="hexo,theme,icer,ggice">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="现如今不管注册、咨询、查询、等等… 都需要使用手机短信验证码认证，以下是收集的一些免费接码平台。配合[临时邮箱]使用更佳。需要注意的是这些都是所有人可以使用的，不要进行敏感操作，否者造成金钱上的损失与本站无关。 国内平台 https://www.pdflibr.com https://www.visitorsms.com/cn https://www.becmd.com http://www.1">
+<meta name="keywords" content="接码平台">
+<meta property="og:type" content="article">
+<meta property="og:title" content="免费接码平台">
+<meta property="og:url" content="https://xv3.github.io/2019/06/10/免费接码平台/index.html">
+<meta property="og:site_name" content="xv3">
+<meta property="og:description" content="现如今不管注册、咨询、查询、等等… 都需要使用手机短信验证码认证，以下是收集的一些免费接码平台。配合[临时邮箱]使用更佳。需要注意的是这些都是所有人可以使用的，不要进行敏感操作，否者造成金钱上的损失与本站无关。 国内平台 https://www.pdflibr.com https://www.visitorsms.com/cn https://www.becmd.com http://www.1">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-06-20T02:09:32.275Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="免费接码平台">
+<meta name="twitter:description" content="现如今不管注册、咨询、查询、等等… 都需要使用手机短信验证码认证，以下是收集的一些免费接码平台。配合[临时邮箱]使用更佳。需要注意的是这些都是所有人可以使用的，不要进行敏感操作，否者造成金钱上的损失与本站无关。 国内平台 https://www.pdflibr.com https://www.visitorsms.com/cn https://www.becmd.com http://www.1">
+  
+  
 
-block content
+  <link rel="stylesheet" href="//cdn.x21.xyz/libs/nprogress/0.2.0/nprogress.css">
+  <link rel="stylesheet" href="//cdn.x21.xyz/libs/highlight/9.12.0/styles/github-gist.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_405585_yuudmyqpo3q.css">
+  <script src="//cdn.x21.xyz/libs/nprogress/0.2.0/nprogress.js"></script>
+  <!-- <script>try{Typekit.load({ async: false });}catch(e){}</script> -->
+  <link rel="stylesheet" href="/style.css">
+  
 
-    section#wrapper.post
-        article
-            header
-                h1!=page.title
-                h2.headline!=date(page.date, 'MMM DD, YYYY h:mm')
-                    |·
-                    |#{wordcount(page.content)} words
-                    |·
-                    |#{min2read(page.content)} minutes read
-                    span.tags
+  
 
-            if toc(page.content)
-                div#toc!=toc(page.content,{list_number:false})
-
-            section#post-body!=page.content
-
-            - var prev = page.prev ? page.prev.path : false;
-            - var next = page.next ? page.next.path : false;
-            nav#post-nav
-                span.prev
-                    if page.prev
-                        a(href=url_for(prev))
-                            span.arrow ←
-                            | Newer Posts
-                span.next
-                    if page.next
-                        a(href=url_for(next))
-                            | Older Posts
-                            span.arrow →
-
-            include includes/comment.pug
+<!-- baidu Analytics -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?403460ed7637fb6c4a9e09a74e662ca0";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+<!-- End baidu Analytics -->
 
 
+</head>
+</html>
+<body>
+  
+  <script>NProgress.start();</script>
+  
+  <div id="site-wrapper">
+    
+    <header class="header">
+  <div class="header-wrapper">
+    <a href="/">
+      <img src="/image/logo.jpg" class="logo">
+      <!-- <span class="site-desc">
+        
+      </span> -->
+    </a>
+    <div class="social-wrapper">
+      
+        
+          <a href="https://twitter.com/iggice" class="social twitter" target="_blank" rel="external">
+            <span class="iconfont icon-twitter"></span>
+          </a>
+          
+          <a href="https://github.com/ggice" class="social github" target="_blank" rel="external">
+            <span class="iconfont icon-github"></span>
+          </a>
+          
+          <a href="http://ggice.lofter.com/" class="social lofter" target="_blank" rel="external">
+            <span class="iconfont icon-lofter"></span>
+          </a>
+          
+          <a href="https://dribbble.com/ggice" class="social dribbble" target="_blank" rel="external">
+            <span class="iconfont icon-dribbble"></span>
+          </a>
+          
+          <a href="mailto:i@ice.gs" class="social email" target="_blank" rel="external">
+            <span class="iconfont icon-email"></span>
+          </a>
+          
+          <a href="/atom.xml" class="social rss" target="_blank" rel="external">
+            <span class="iconfont icon-rss"></span>
+          </a>
+          
+      
+      
+      <a href="#" class="social search-do" target="_blank" rel="external">
+        <span class="iconfont icon-search"></span>
+      </a>
+            
+      <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="https://xv3.github.io"></form> -->
+    </div>
+    <div class="search-wrap">
+      <div class="search-content animated fade-in">
+        <p class="search-input">
+          <span class="iconfont icon-search"></span>
+          <input tabindex="1">
+        </p>
+        <ul class="search-result">
+            
+              <div class="tags">
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OneDrive/">OneDrive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片/">图片</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/影视/">影视</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/接码平台/">接码平台</a></li></ul>
+                </div>
+            
+        </ul>
+      </div>
+    </div>
+    <nav class="header-nav">
+      
+        <a href="/" class="archives">
+          home
+        </a>
+        
+        <a href="/tags/web-development/" class="archives">
+          web development
+        </a>
+        
+        <a href="/tags/soft/" class="archives">
+          soft
+        </a>
+        
+        <a href="/tags/os/" class="archives">
+          os
+        </a>
+        
+        <a href="/archives" class="archives">
+          archives
+        </a>
+        
+        <a href="/README/" class="archives">
+          README
+        </a>
+        
+    </nav>
+  </div>
+</header>
+    <script>NProgress.set(0.4);</script>
+    
+    <main id="main" role="main">
+      <article id="post-免费接码平台" class="post article white-box article-type-post animated fade-in-top" itemscope itemprop="blogPost">
+  <section class="post-header article-header">
+    <h2 class="title">
+        <a href="/2019/06/10/免费接码平台/">
+          免费接码平台
+        </a>
+      </h2>
+      <div class="subtitle">
+          <time>
+            Jun 10, 2019
+          </time>
+          
+            <span class="tags">
+                <span class="iconfont icon-tag"></span>
+                <a class="tag-link" href="/tags/接码平台/">接码平台</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    <div class="article-entry" itemprop="articleBody">
+      <p><a name="c9AkE"></a></p>
+<h2 id="现如今不管注册、咨询、查询、等等…-都需要使用手机短信验证码认证，"><a href="#现如今不管注册、咨询、查询、等等…-都需要使用手机短信验证码认证，" class="headerlink" title="现如今不管注册、咨询、查询、等等… 都需要使用手机短信验证码认证，"></a>现如今不管注册、咨询、查询、等等… 都需要使用手机短信验证码认证，</h2><p>以下是收集的一些免费接码平台。配合[临时邮箱]使用更佳。<br>需要注意的是这些都是所有人可以使用的，不要进行敏感操作，否者造成金钱上的损失与本站无关。<br><br><a name="LWi5A"></a></p>
+<h2 id="国内平台"><a href="#国内平台" class="headerlink" title="国内平台"></a>国内平台</h2><ul>
+<li><a href="https://www.pdflibr.com/" target="_blank" rel="noopener">https://www.pdflibr.com</a></li>
+<li><a href="https://www.visitorsms.com/cn" target="_blank" rel="noopener">https://www.visitorsms.com/cn</a></li>
+<li><a href="https://www.becmd.com/" target="_blank" rel="noopener">https://www.becmd.com</a></li>
+<li><a href="http://www.114sim.com/" target="_blank" rel="noopener">http://www.114sim.com</a></li>
+<li><a href="https://yunduanxin.net/" target="_blank" rel="noopener">https://yunduanxin.net</a></li>
+<li><a href="http://www.smszk.com/" target="_blank" rel="noopener">http://www.smszk.com</a></li>
+<li><a href="http://z-sms.com/" target="_blank" rel="noopener">http://z-sms.com</a></li>
+<li><a href="http://www.shejiinn.com/" target="_blank" rel="noopener">http://www.shejiinn.com</a></li>
+<li><a href="https://sms.cngrok.com/" target="_blank" rel="noopener">https://sms.cngrok.com</a></li>
+</ul>
+<p><a name="2o1AM"></a></p>
+<h2 id="国外平台"><a href="#国外平台" class="headerlink" title="国外平台"></a>国外平台</h2><ul>
+<li><a href="https://ch.freephonenum.com/" target="_blank" rel="noopener">https://ch.freephonenum.com</a></li>
+<li><a href="https://smsreceivefree.com/" target="_blank" rel="noopener">https://smsreceivefree.com</a></li>
+<li><a href="https://zh.mytrashmobile.com/" target="_blank" rel="noopener">https://zh.mytrashmobile.com</a></li>
+<li><a href="https://www.receive-sms-online.info/" target="_blank" rel="noopener">https://www.receive-sms-online.info</a></li>
+<li><a href="https://receiveasms.com/" target="_blank" rel="noopener">https://receiveasms.com</a></li>
+<li><a href="https://sms-online.co/receive-free-sms" target="_blank" rel="noopener">https://sms-online.co/receive-free-sms</a></li>
+<li><a href="https://receive-sms.com/" target="_blank" rel="noopener">https://receive-sms.com</a></li>
+</ul>
+
+    </div>
+  </section>
+
+  
+  
+</article>
+      <script>NProgress.set(0.6);</script>
+    </main>
+    
+    <footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-link">
+      
+      <h3>LINKS</h3>
+      <p>
+        
+          <a href="http://1x0.xyz/" target="_blank">Tian1x0</a>
+        
+          <a href="http://www.royalmice.com/hankzhou/" target="_blank">Hankzhou</a>
+        
+          <a href="http://sjydh.me/" target="_blank">设计有点货</a>
+        
+          <a href="https://developers.google.com/web/fundamentals/" target="_blank">Web fundamentals</a>
+        
+      </p>
+      
+    </div>
+    <div class="footer-tags">
+      
+        <h3>TAGS</h3>        
+        <div class="tags">
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OneDrive/">OneDrive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片/">图片</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/影视/">影视</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/接码平台/">接码平台</a></li></ul>
+          </div>
+      
+    </div>
+    <div class="footer-info">
+        <div>Theme <span class="codename"><a href="https://github.com/GGICE/hexo-icer" target="_blank">icer</a></span> designed & coded by <a href="https://ice.gs/" target="_blank">GGICE</a></div>
+        <div>Copyright &copy; 2019, <a href="/">xv3</a>  . All rights reserved .</div>
+      </div>
+  </div>
+</footer>
 
 
+    <script>NProgress.set(0.8);</script>
+    
+  </div>
+
+  <script src="//cdn.x21.xyz/libs/highlight/9.12.0/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/main.js"></script>
+
+<!-- Commit -->
+
+
+
+  <script>
+    NProgress.done();
+  </script>
+  
+</body>
+</html>

@@ -1,21 +1,403 @@
-extends includes/layout
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Archives: 2019/6 | xv3</title>
+  <meta name="description" content="A geeker blog.">
+  <meta name="keywords" content="hexo,theme,icer,ggice">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="xv3">
+<meta property="og:url" content="https://xv3.github.io/archives/2019/06/index.html">
+<meta property="og:site_name" content="xv3">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="xv3">
+  
+  
 
-block content
+  <link rel="stylesheet" href="//cdn.x21.xyz/libs/nprogress/0.2.0/nprogress.css">
+  <link rel="stylesheet" href="//cdn.x21.xyz/libs/highlight/9.12.0/styles/github-gist.css">
+  <link rel="stylesheet" href="//at.alicdn.com/t/font_405585_yuudmyqpo3q.css">
+  <script src="//cdn.x21.xyz/libs/nprogress/0.2.0/nprogress.js"></script>
+  <!-- <script>try{Typekit.load({ async: false });}catch(e){}</script> -->
+  <link rel="stylesheet" href="/style.css">
+  
 
-    section#wrapper.home
+  
 
-        div.archive
-            h3!='~yeah~baby~'
-            each item in site.posts.sort('date', -1).toArray()
-              - var postTitle = item.title || 'No Title'
-              - var createDate = date(item.date, 'MMM DD')
-              ul
-                  div.post-item
-                      div.post-time=createDate
-                      if item.link
-                          a.post-link(href=url_for(item.link))= postTitle
-                      else
-                          a.post-link(href=url_for(item.path))= postTitle
+<!-- baidu Analytics -->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?403460ed7637fb6c4a9e09a74e662ca0";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+<!-- End baidu Analytics -->
+
+
+</head>
+</html>
+<body>
+  
+  <script>NProgress.start();</script>
+  
+  <div id="site-wrapper">
+    
+    <header class="header">
+  <div class="header-wrapper">
+    <a href="/">
+      <img src="/image/logo.jpg" class="logo">
+      <!-- <span class="site-desc">
+        
+      </span> -->
+    </a>
+    <div class="social-wrapper">
+      
+        
+          <a href="https://twitter.com/iggice" class="social twitter" target="_blank" rel="external">
+            <span class="iconfont icon-twitter"></span>
+          </a>
+          
+          <a href="https://github.com/ggice" class="social github" target="_blank" rel="external">
+            <span class="iconfont icon-github"></span>
+          </a>
+          
+          <a href="http://ggice.lofter.com/" class="social lofter" target="_blank" rel="external">
+            <span class="iconfont icon-lofter"></span>
+          </a>
+          
+          <a href="https://dribbble.com/ggice" class="social dribbble" target="_blank" rel="external">
+            <span class="iconfont icon-dribbble"></span>
+          </a>
+          
+          <a href="mailto:i@ice.gs" class="social email" target="_blank" rel="external">
+            <span class="iconfont icon-email"></span>
+          </a>
+          
+          <a href="/atom.xml" class="social rss" target="_blank" rel="external">
+            <span class="iconfont icon-rss"></span>
+          </a>
+          
+      
+      
+      <a href="#" class="social search-do" target="_blank" rel="external">
+        <span class="iconfont icon-search"></span>
+      </a>
+            
+      <!-- <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="https://xv3.github.io"></form> -->
+    </div>
+    <div class="search-wrap">
+      <div class="search-content animated fade-in">
+        <p class="search-input">
+          <span class="iconfont icon-search"></span>
+          <input tabindex="1">
+        </p>
+        <ul class="search-result">
+            
+              <div class="tags">
+                   <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OneDrive/">OneDrive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片/">图片</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/影视/">影视</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/接码平台/">接码平台</a></li></ul>
+                </div>
+            
+        </ul>
+      </div>
+    </div>
+    <nav class="header-nav">
+      
+        <a href="/" class="archives">
+          home
+        </a>
+        
+        <a href="/tags/web-development/" class="archives">
+          web development
+        </a>
+        
+        <a href="/tags/soft/" class="archives">
+          soft
+        </a>
+        
+        <a href="/tags/os/" class="archives">
+          os
+        </a>
+        
+        <a href="/archives" class="archives">
+          archives
+        </a>
+        
+        <a href="/README/" class="archives">
+          README
+        </a>
+        
+    </nav>
+  </div>
+</header>
+    <script>NProgress.set(0.4);</script>
+    
+    <main id="main" role="main">
+      
+	
+
+
+	<section class="page-header archive">
+    <h1>- <span>2019.6</span> -</h1>
+  </section>
 
 
 
+
+<section class="post-list">
+	
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/2019/06/20/免费无版权优质图片网站-个人-商用值得收藏/">
+          免费无版权优质图片网站 个人+商用值得收藏
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            Jun 20, 2019
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/图片/">图片</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    想找到免费优质的图片要花点功夫，网上的图片大多都有版权，一旦惹上纠纷轻则要删图赔款，重则可能惹上官司。以下这些网站都提供免费分享图片的服务，而且图片的数量和质量都非常不错，希望对大家有所帮助。
+一击搜图网址：https://www.yjst...
+
+    <div class="readmore">
+      <a href="/2019/06/20/免费无版权优质图片网站-个人-商用值得收藏/" class="iconfont icon-more">Read More</a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/2019/06/12/Aria2-Aria2Ng-OneIndex-OneDrive离线下载-在线观看网盘/">
+          Aria2+Aria2Ng+OneIndex+OneDrive离线下载/在线观看网盘
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            Jun 12, 2019
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/OneDrive/">OneDrive</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+获取OneDrive本文转自：&gt; 王大佬免费发放 Office 365 A1 帐号：帐号主要包含了 OneDrive 1TB 的云储存，可以配合 OneIndex 搭建分享型网盘，全程走 OneDrive 流量的网盘前端程序，支持文...
+
+    <div class="readmore">
+      <a href="/2019/06/12/Aria2-Aria2Ng-OneIndex-OneDrive离线下载-在线观看网盘/" class="iconfont icon-more">Read More</a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/2019/06/10/免费接码平台/">
+          免费接码平台
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            Jun 10, 2019
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/接码平台/">接码平台</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+现如今不管注册、咨询、查询、等等… 都需要使用手机短信验证码认证，以下是收集的一些免费接码平台。配合[临时邮箱]使用更佳。需要注意的是这些都是所有人可以使用的，不要进行敏感操作，否者造成金钱上的损失与本站无关。
+国内平台
+https://...
+
+    <div class="readmore">
+      <a href="/2019/06/10/免费接码平台/" class="iconfont icon-more">Read More</a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/2019/06/06/免费在线影视/">
+          免费在线影视
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            Jun 6, 2019
+          </time>
+          
+            <span class="tags">
+                 <span class="iconfont icon-tag"></span>
+                 <a class="tag-link" href="/tags/影视/">影视</a>
+              </span>
+          
+      </div>
+  </section>
+  <section class="content">
+    
+全能影视免费的在线影视站，仅用于测试用途。日常请使用正版视频软件，支持正版人人有责。
+
+
+
+名称
+免费
+特点
+
+
+
+达达兔
+手机视频
+在线视频无广告
+
+
+盐酥鸡
+手机影视
+免费视频无广告
+
+
+片吧
+免费视频
+最新免费在线视频
+
+
+嗨多米
+...
+
+    <div class="readmore">
+      <a href="/2019/06/06/免费在线影视/" class="iconfont icon-more">Read More</a>
+    </div>
+
+  </section>
+</article>
+  
+    <article class="post   animated fade-in-top">
+
+  <section class="post-header">
+    
+      <h2 class="title">
+        <a href="/2019/06/01/hello-world/">
+          Hello World
+        </a>
+      </h2>
+      
+      <div class="subtitle">
+          <time>
+            Jun 1, 2019
+          </time>
+          
+      </div>
+  </section>
+  <section class="content">
+    Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex...
+
+    <div class="readmore">
+      <a href="/2019/06/01/hello-world/" class="iconfont icon-more">Read More</a>
+    </div>
+
+  </section>
+</article>
+  
+</section>
+
+
+
+      <script>NProgress.set(0.6);</script>
+    </main>
+    
+    <footer class="footer">
+  <div class="footer-wrap">
+    <div class="footer-link">
+      
+      <h3>LINKS</h3>
+      <p>
+        
+          <a href="http://1x0.xyz/" target="_blank">Tian1x0</a>
+        
+          <a href="http://www.royalmice.com/hankzhou/" target="_blank">Hankzhou</a>
+        
+          <a href="http://sjydh.me/" target="_blank">设计有点货</a>
+        
+          <a href="https://developers.google.com/web/fundamentals/" target="_blank">Web fundamentals</a>
+        
+      </p>
+      
+    </div>
+    <div class="footer-tags">
+      
+        <h3>TAGS</h3>        
+        <div class="tags">
+             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/OneDrive/">OneDrive</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片/">图片</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/影视/">影视</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/接码平台/">接码平台</a></li></ul>
+          </div>
+      
+    </div>
+    <div class="footer-info">
+        <div>Theme <span class="codename"><a href="https://github.com/GGICE/hexo-icer" target="_blank">icer</a></span> designed & coded by <a href="https://ice.gs/" target="_blank">GGICE</a></div>
+        <div>Copyright &copy; 2019, <a href="/">xv3</a>  . All rights reserved .</div>
+      </div>
+  </div>
+</footer>
+
+
+    <script>NProgress.set(0.8);</script>
+    
+  </div>
+
+  <script src="//cdn.x21.xyz/libs/highlight/9.12.0/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/js/main.js"></script>
+
+<!-- Commit -->
+
+
+
+  <script>
+    NProgress.done();
+  </script>
+  
+</body>
+</html>
